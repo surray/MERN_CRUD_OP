@@ -1,7 +1,7 @@
 import React from "react";
 import InfoForm from "./form";
 import InfoTable from "./table";
-import axiosInstance from "../config";
+import {axiosInstance} from "../config";
 
 class App extends React.Component
 {
