@@ -18,12 +18,12 @@ class App extends React.Component
     {
         if(!data.isEdit)
         {
-          axiosInstance.post("https://merncruding.herokuapp.com/info/",data).then(res=>{
+          axiosInstance.post("/",data).then(res=>{
             this.getAll();})
         }
         else
         {
-            axiosInstance.put("https://merncruding.herokuapp.com/info/update",data).then(res=>{
+            axiosInstance.put("/update",data).then(res=>{
             this.getAll();})
 
         } 
@@ -39,7 +39,7 @@ class App extends React.Component
 
     getAll()
     {
-        axiosInstance.get("https://merncruding.herokuapp.com/info/").then(res=>{
+        axiosInstance.get("/").then(res=>{
             
             this.setState({
                 data:res.data
@@ -63,7 +63,7 @@ class App extends React.Component
         var option =window.confirm(`Are you sure to delete ${data.Name}`)
         if(option)
         {
-            axiosInstance.delete(`https://merncruding.herokuapp.com/info/del/${data._id}`).then(res=>{
+            axiosInstance.delete(`/del/${data._id}`).then(res=>{
                 console.log(res);
                 this.getAll();
             })
