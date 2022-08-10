@@ -31,10 +31,10 @@ class InfoTable extends React.Component
                           <td>{e.Name}</td>
                           <td>{e.Age}</td>
                           <td>{e.City}</td>
-                          <td><button type="submit" className="btn btn-primary"
+                          <td><button type="submit" className="btn btn-link"
                           onClick={event=>{this.props.setData(e)} 
                           }>Edit</button></td>
-                          <td><button type="submit" className="btn btn-primary"
+                          <td><button type="submit" className="btn btn-danger"
                           onClick={event=>{this.props.del(e)} 
                           }>Delete</button></td>
                       </tr>

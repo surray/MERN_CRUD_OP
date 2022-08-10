@@ -1,6 +1,6 @@
 import React from "react";
 
-
+import "./App.css"
 class InfoForm extends React.Component
 {
     constructor()
@@ -67,32 +67,38 @@ class InfoForm extends React.Component
     {
       return(
         <form onSubmit={this.infoSubmit} autoComplete="off">
-        <div className="form-group">
-          <label>Name</label>
+        <div className="form-group col-sm-10">
+          
           <input type="text" className="form-control" placeholder="Enter name"
           onChange={this.infoChange}
           name="Name"
           value={this.state.Name}
-          />
+          required/>
+          
         </div>
-        <div className="form-group">
-          <label >City</label>
+        <div className="form-group col-sm-10">
+          
           <input type="text" className="form-control" placeholder="Enter City"
            onChange={this.infoChange}
            name="City"
            value={this.state.City}
-           />
+           required/>
         </div>
-        <div className="form-group">
-          <label >Age</label>
-          <input type="text" className="form-control" placeholder="Enter Age"
-           onChange={this.infoChange}
-           name="Age"
-           value={this.state.Age}
-           />
+        <div className="form-group col-sm-10">
+            <p>Age: {this.state.Age}</p>
+            <input  type="range" min="1" max="100" class="slider" id="myRange"
+            onChange={this.infoChange}
+            name="Age"
+            value={this.state.Age}
+            required/>           
         </div>
         
-        <button type="submit" className="btn btn-primary">{this.state.isEdit ? 'Update' :'Create'}</button>
+        <div className="form-group col-sm-10">
+      
+            <button className="btn btn-success" type="submit" >{this.state.isEdit ? 'Update' :'Create'}
+           
+            </button>
+       </div>
       </form>
       )
     }
