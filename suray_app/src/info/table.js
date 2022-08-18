@@ -11,7 +11,7 @@ class InfoTable extends React.Component
     render()
     {
       return(
-        <table className="table">
+        <table className="table table table-bordered table table-hover">
         <thead>
           <tr>
             <th scope="col">Name</th>
