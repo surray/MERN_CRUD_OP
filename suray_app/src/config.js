@@ -1,5 +1,5 @@
 import axios from "axios";
 
 export const axiosInstance =axios.create({
-    baseURL:"https://merncruding.herokuapp.com/info/"
+    baseURL:"https://my-crud.onrender.com/"
 })
