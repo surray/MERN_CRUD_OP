@@ -43,8 +43,8 @@ class App extends React.Component
         axiosInstance.get("/").then(res=>{
             
             this.setState({
-                data:Array.from(res.data)
-                //data:res.data
+                //data:Array.from(res.data)
+                data:res.data
 
             })
 
@@ -55,8 +55,8 @@ class App extends React.Component
     {
         
         this.setState({
-            editData:Array.from(data)
-            //editData:data
+            //editData:Array.from(data)
+            editData:data
         })
     }
     
