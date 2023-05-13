@@ -55,7 +55,8 @@ class App extends React.Component
     {
         
         this.setState({
-            editData:data
+            editData:Array.from(data)
+            //editData:data
         })
     }
     
