@@ -43,7 +43,8 @@ class App extends React.Component
         axiosInstance.get("/").then(res=>{
             
             this.setState({
-                data:res.data
+                data:Array.from(res.data)
+                //data:res.data
 
             })
 
